@@ -1,0 +1,125 @@
+.el-table-filter{
+  width: 113px;
+  padding: 4px 0 10px!important;
+  background-color: $dark-blue !important;
+  border-radius:4px;
+
+  .el-table-filter__checkbox-group {
+    padding-bottom: 0;
+  }
+
+  .el-table-filter__checkbox-group label.el-checkbox {
+    display: block;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 0;
+    padding: 0 10px;
+
+    &:hover {
+      background: rgba(50, 105, 246, 0.23);
+    }
+
+    svg.icon {
+      font-size: 12px;
+    }
+  }
+
+  .el-checkbox__label {
+    color:#fff;
+    font-size: 12px;
+    padding-left: 0;
+    width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: sub;
+  }
+
+  .el-table-filter__bottom {
+    text-align: right;
+    margin-top: 10px;
+    padding: 0 8px;
+    
+    .is-disabled {
+      background-color:#fff;
+      color:#666;
+      border: 1px solid #fff;
+      cursor: not-allowed;
+    }
+
+    button {
+      @include setWH(auto, 20px);
+
+      border-radius: 2px;
+      border: 1px solid#4869f2;
+      background-color:#4869f2;
+      color: #fff;
+      font-size: 12px;
+      line-height: 18px;
+      &.default {
+        border: 1px solid #757A8A;
+        background-color: unset;
+        color: #757A8A;
+
+      }
+    }
+  }
+
+  &::before{
+    box-sizing: content-box;
+    position: absolute;
+    top: -18px;;
+    right: 24px;
+    border-bottom: 9px solid $dark-blue;
+    border-top: 9px solid transparent;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    display: block;
+    content:'';
+    z-index: 2;
+  }
+
+  .el-checkbox__input.is-checked + .el-checkbox__label {
+    color: #b3ddf4;
+  }
+
+  .el-checkbox {
+    padding: 0 !important;
+
+    .el-checkbox__inner {
+      background: none;
+      position: relative;
+      transform: scale(0.8);
+      top: -1px;
+      margin-right: 5px;
+    }
+  }
+
+  .el-checkbox__label,
+  .el-checkbox__input {
+    vertical-align: top;
+  }
+
+  .el-table-filter__bottom {
+    border: none;
+    margin: 0;
+    overflow: hidden;
+
+    button {
+      &:first-child {
+        float: right;
+        margin-left: 5px;
+      }
+
+      &:last-child {
+        background-color: unset;
+        border: 1px solid #757a8a;
+        color: #757a8a;
+      }
+    }
+
+ 
+  }
+
+}

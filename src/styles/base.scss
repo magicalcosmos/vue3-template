@@ -1,0 +1,336 @@
+
+@import './reset.scss';
+@import './variables.scss';
+@import './iconfont.scss';
+
+html, body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-size: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+  filter: none !important;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+#app {
+  height: 100%;
+}
+
+//main-container全局样式
+.app-main {
+  min-height: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.dialog-message {
+  color: red;
+  font-size: 14px;
+}
+
+.common-table-list {
+  table {
+    td {
+      padding: 5px 0 !important;
+    }
+  }
+}
+
+.icon {
+  font-size: 14px;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.icon-s,
+.icon-p,
+.icon-t,
+.icon-g {
+  @include setWHL(18px, 18px);
+
+  background: $primary;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  overflow: hidden;
+  position: relative;
+  top: 2px;
+  text-align: center;
+  vertical-align: top;
+}
+
+//TODO: complete in future
+/* the scrollbar */
+::-webkit-scrollbar {
+  user-select: none;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+}
+
+/* the buttons on the scrollbar (arrows pointing upwards and downwards) */
+::-webkit-scrollbar-button {
+
+}
+
+/* the track (progress bar) NOT covered by the handle */
+::-webkit-scrollbar-track-piece {
+  cursor: pointer;
+
+}
+
+/* the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  // background-color: rgba(#101F1C, 0.1);
+}
+
+/* the draggable resizing handle that appears at the bottom corner of some elements */
+::-webkit-resizer {
+
+}
+
+/* the track (progress bar) of the scrollbar */
+::-webkit-scrollbar-track {
+  user-select: none;
+  cursor: pointer;
+  width: 10px;
+  background: rgba(#101F1C, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+/* the draggable scrolling handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(#101F1C, 0.15);
+  background-clip: padding-box;
+  user-select: none;
+  min-height: 28px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  //border-radius: 5px;
+  //background: #888;
+}
+
+/* the draggable scrolling handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(#101F1C, 0.5);
+}
+
+.required {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+
+.bg-head {
+  background-color: #2e3950;
+}
+
+.head-height {
+  height: 80px;
+  line-height: 80px;
+}
+
+.bg-main {
+  background-color: #f9fbfc;
+}
+
+.bg-gray {
+  background-color: #eee;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+a.primary {
+  color: $color-el-primary;
+
+  &:hover {
+    color: $color-el-primary;
+  }
+}
+
+.text-color-primary{
+  color: $color-el-primary;
+}
+
+.error-tips {
+  color: #F56C6C;
+  font-size: 12px;
+}
+
+.v-hide {
+  visibility: hidden;
+}
+
+.iconfont {
+  cursor: pointer;
+}
+
+.hidden {
+  overflow: hidden !important;
+}
+
+// 全屏
+.full-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.header-icon{
+    font-size: 22px;
+    margin-right: 10px;
+    color: $primary-color !important;
+}
+
+.title.big-banner {
+  @include setHL(60px);
+
+  text-align: center;
+  font-size: $luge-font;
+  color: $font-color-important;
+  font-weight: bold;
+}
+
+.icon-auto {
+  cursor: inherit !important;
+}
+
+/* 溢出时显示省略号 */
+.text-ellipsis {
+  @include overflowText();
+}
+
+.r-normal-button {
+  width: 100px;
+  height: 32px
+}

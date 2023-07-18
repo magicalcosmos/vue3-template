@@ -1,0 +1,140 @@
+:root {
+  --el-color-primary: #3269f6;
+  --el-color-primary-light-3: #3269f6;
+  --el-color-primary-light-5: #3269f6;
+  --el-color-primary-light-7: #c6e2ff;
+  --el-color-primary-light-8: #d9ecff;
+  --el-color-primary-light-9: #ecf5ff;
+  --el-color-primary-dark-2: #3269f695;
+}
+
+.el-table {
+  font-size: 12px;
+}
+
+.r-table__expand-icon {
+  position: relative;
+  cursor: pointer;
+  color: #666;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  height: 20px;
+}
+
+.r-table__expand-icon--expanded {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.el-button.locked-size {
+  font-size: 12px;
+  font-weight: normal !important;
+  width: 74px;
+
+  .el-icon-loading + span {
+    display: none;
+  }
+}
+
+.el-button--primary,
+.el-button--primary:hover {
+  background-color: $primary-color;
+}
+
+.el-menu--horizontal .el-menu .el-menu-item,
+.el-menu--horizontal .el-menu .el-submenu__title {
+  font-size: 12px;
+}
+
+/* 重写el-pagination分页组件样式 */
+.el-pagination {
+  font-size: 13px;
+
+  button,
+  span:not([class*='suffix']) {
+    font-size: 13px;
+  }
+}
+
+/*
+  重写el-dialog样式，使用方式如下
+  <el-dialog v-model="showDialog" :title="title" custom-class="sr-dialog-container"></el-dialog>
+ */
+.sr-dialog-container {
+  .el-dialog__header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 24px;
+    margin-right: 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #dee2e6;
+
+    .el-dialog__title {
+      font-size: 14px;
+      color: #121212;
+      font-weight: bolder;
+      letter-spacing: 2px;
+    }
+
+    .el-dialog__headerbtn {
+      margin-right: 24px;
+      top: unset;
+      right: 0;
+      width: 18px;
+      height: 18px;
+      font-size: var(--el-message-close-size, 18px);
+    }
+  }
+
+  .el-dialog__body {
+    padding: 12px 24px;
+    color: #606266;
+    font-size: 14px;
+  }
+
+  .el-dialog__footer {
+    padding: 0 24px 12px;
+  }
+}
+
+.project-basic,
+.upload-form-content,
+.config-form-content {
+  .el-form-item {
+    margin-bottom: 15px;
+
+    .el-form-item__label {
+      text-align: left;
+      font-weight: normal;
+      font-size: 12px;
+      color: $font-color-important;
+      line-height: unset;
+      padding: 0;
+    }
+
+    .el-form-item__content {
+      line-height: unset;
+
+      .el-input__inner {
+        @include setHL(20px !important);
+
+        font-size: 12px;
+        padding: 0 10px;
+        border-radius: 2px;
+        border-color: #d1d1d1;
+      }
+
+      .el-textarea__inner {
+        width: 200px;
+        font-size: 12px;
+        padding: 5px 10px !important;
+        border-radius: 2px;
+        border-color: #d1d1d1;
+      }
+    }
+  }
+}

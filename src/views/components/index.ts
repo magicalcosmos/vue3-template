@@ -1,0 +1,3 @@
+/*** root  */
+
+export default {};

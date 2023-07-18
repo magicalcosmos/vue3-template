@@ -1,0 +1,6 @@
+{
+  "enable": false,
+  "WS_ENDPOINT": "ws://127.0.0.1:8006",
+  "API_BASE": "http://127.0.0.1:8006/api/v2",
+  "RETRY_TIME": 2000
+}
